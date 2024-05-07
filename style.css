@@ -7,6 +7,7 @@ body {
 
 body {
     background-image: linear-gradient(to right bottom, #7ed567, #28b485);
+    color: black;
     font-family: Arial;
     letter-spacing: 1px;
     font-size: 13px;
@@ -17,6 +18,7 @@ body {
     align-items: center;
     background-size: cover;
     background-position: center;
+
 }
 
 @media only screen and (max-width: 600px) {
