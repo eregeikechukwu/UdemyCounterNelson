@@ -4,9 +4,7 @@ let array = [];
 // let arraye = "";
 let arraye = 0;
 
-const dayJob = Number(
-  prompt("How many hourrs of lecture do you want to cover?")
-);
+let dayJob = Number(prompt("How many hours of lecture do you want to cover?"));
 function calcTime() {
   let minutes = 0;
 
@@ -62,9 +60,9 @@ function calcTime() {
 
   const lectureDays = function (hour) {
     if (hour < dayJob) {
-      return `I have ${array.length} lectures for today`;
+      return `You have ${array.length} lectures for today`;
     } else {
-      return `I have ${array.length} lectures for ${daysRemaining}days`;
+      return `You have ${array.length} lectures for ${daysRemaining}days`;
     }
   };
 
@@ -90,17 +88,25 @@ function calcTime() {
   }
 }
 
-document.querySelector(".button").addEventListener("click", calcTime);
+document.querySelector(".button").addEventListener("click", function () {
+  if (dayJob) {
+    calcTime();
+  } else {
+    document.querySelector(".content").textContent =
+      "Reload the page and answer the prompt!";
+  }
+});
 // document.querySelector(".button").addEventListener("click", function () {
 
 function init() {
   array = [];
   document.querySelector(".dleft").textContent = ":";
-  document.querySelector(".content").textContent = ":";
+  document.querySelector(".Lcontent").textContent = ":";
   document.querySelector(".courset").textContent = ":";
   document.querySelector(".message").textContent =
-    "Lets Calculate your quota today!!😀";
+    "Lets Calculate your quota today!!";
   arraye = "";
   document.querySelector(".input").value = "";
+  // dayJob = Number(prompt("How many hours of lecture do you want to cover?"));
 }
 document.querySelector(".btn").addEventListener("click", init);
