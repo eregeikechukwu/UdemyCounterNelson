@@ -1,0 +1,202 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #7ed567, #28b485);
+    font-family: Arial;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+
+    /* padding: 5rem 15rem; */
+    height: 80vh;
+    width: 70vw;
+    background-image: linear-gradient(105deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.9) 60%,
+            transparent 50%),
+        url(montanas-con-nieve-en-el-bosque_1280x720_3934.jpg);
+    background-position: 100%;
+    box-shadow: -.6rem .3rem 3rem .6rem rgba(95, 96, 95, 0.4);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 90vh;
+        width: 90vw;
+        box-shadow: -.2rem .1rem 1rem .2rem rgba(95, 96, 95, 0.5);
+
+        background-image: linear-gradient(105deg,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 255, 255, 0.9) 70%,
+                transparent 50%),
+            url(montanas-con-nieve-en-el-bosque_1280x720_3934.jpg);
+    }
+}
+
+.content {
+    display: flex;
+    width: 69%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.button,
+.btn {
+    width: 5rem;
+    color: white;
+    background-color: #28b485;
+    border-radius: 5rem;
+    height: 2rem;
+    border: none;
+}
+
+.button:hover,
+.btn:hover {
+    /* transform: translateY(-0.2rem); */
+    box-shadow: 0 0.6rem 0.6rem 0 rgba(95, 96, 95, 0.5);
+    transition: all 0.5s;
+
+    animation: hover 1.5s ease-in infinite;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0rem);
+        transform: scale(1);
+        background-color: #28b485;
+    }
+
+    50% {
+        transform: translateY(0.2rem);
+        transform: scale(1.2);
+        background-color: #55c57a;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        transform: scale(1);
+        background-color: #28b485;
+    }
+}
+
+.btn:active,
+.button:active {
+    transform: translateY(0.5rem);
+}
+
+.btn {
+    width: 9rem;
+    margin-top: 1.5rem;
+}
+
+.input {
+    border-radius: 2px;
+    min-width: 18rem;
+    min-height: 3.5rem;
+    border: none;
+    padding: 0 1rem;
+    background-color: rgba(white, 0.5);
+    font-size: 1rem;
+    border-bottom: 3px transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .input {
+        min-width: 80%;
+        min-height: 2rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* 75em;//1200px; 62.5em;//1000p 50em;//800px $ 37.5em;//600px */
+.input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(black, 0.1);
+    border-bottom: 3px solid #55c57a;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-container {
+        margin-bottom: 10%;
+    }
+}
+
+.input:placeholder-shown+.label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.infocon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.label {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    right: 0;
+    font-size: 1rem;
+    /* margin-top: 0.7rem;
+  margin-left: -130px; */
+    transition: all 0.4s;
+}
+
+@media only screen and (max-width: 600px) {
+    .label {
+        font-size: 0.8rem;
+    }
+}
+
+.message {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #7ed567, #28b485);
+}
+
+@media only screen and (max-width: 600px) {
+    .message {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+}
