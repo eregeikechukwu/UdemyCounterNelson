@@ -22,6 +22,11 @@ body {
 
 }
 
+::selection{
+    color: white;
+    background-color: #7ed567;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         font-size: 10px;
