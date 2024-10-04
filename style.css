@@ -76,6 +76,7 @@ body {
     background-color: #28b485;
     border-radius: 5rem;
     height: 2rem;
+    backface-visibility: hidden;
     border: none;
 }
 
@@ -84,6 +85,7 @@ body {
     /* transform: translateY(-0.2rem); */
     box-shadow: 0 0.6rem 0.6rem 0 rgba(95, 96, 95, 0.5);
     transition: all 0.5s;
+    backface-visibility: hidden;
 
     animation: hover 1.5s ease-in infinite;
 }
@@ -116,6 +118,8 @@ body {
 .btn {
     width: 9rem;
     margin-top: 1.5rem;
+    backface-visibility: hidden;
+
 }
 
 .input {

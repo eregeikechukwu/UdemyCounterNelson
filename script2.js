@@ -17,6 +17,7 @@ function calcTime() {
 
   array = [];
 
+  console.log(array);
   for (let i = 0; i < inputArray.length; i++) {
     let number = parseInt(inputArray[i]);
     if (inputArray[i]) {
